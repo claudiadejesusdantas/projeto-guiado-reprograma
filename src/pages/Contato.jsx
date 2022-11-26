@@ -34,6 +34,9 @@ export function Contato() {
       texto: mensagem
     })
 
+    setNome('')
+    setEmail('')
+    setMensagem('')
   }
 
   return(
@@ -45,16 +48,19 @@ export function Contato() {
             className={styles.formInput} 
             placeholder="Digite seu nome" 
             onChange={handleInputValueNome}
+            value={nome}
           />
           <input 
             className={styles.formInput} 
             placeholder="Digite seu email"
             onChange={handleInputValueEmail}
+            value={email}
           />
           <textarea 
             className={styles.formTextArea} 
             placeholder="Digite sua mensagem"
             onChange={handleInputValueMensagem}
+            value={mensagem}
           />
           <button type="submit" className={styles.formButton}>Enviar mensagem</button>
         </form>
